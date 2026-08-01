@@ -275,3 +275,109 @@ html[lang="en"] .card-body h3{ font-family:var(--font-body-en); font-weight:700;
 .cta-band{ background:var(--green-light); text-align:center; }
 .cta-inner{ display:flex; flex-direction:column; align-items:center; gap:24px; }
 .cta-inner h2{ color:var(--ink); font-size:clamp(26px,3.6vw,36px); }
+
+/* =====================================================================
+   MOBILE / PHONE EXPERIENCE
+   Hamburger nav + comfortable spacing, sizing and touch targets on
+   small screens. Everything below only changes layout at <=720px /
+   <=480px — desktop styles above are untouched.
+   ===================================================================== */
+
+/* hamburger button — hidden on desktop */
+.menu-toggle{
+  display:none;
+  width:40px; height:40px; border-radius:8px;
+  border:1px solid var(--line); background:transparent;
+  align-items:center; justify-content:center;
+  cursor:pointer; flex-shrink:0;
+}
+.menu-toggle span{
+  display:block; width:18px; height:2px; background:var(--ink);
+  position:relative; transition:transform .2s ease, opacity .2s ease;
+}
+.menu-toggle span::before, .menu-toggle span::after{
+  content:''; position:absolute; inset-inline-start:0; width:18px; height:2px; background:var(--ink);
+  transition:transform .2s ease;
+}
+.menu-toggle span::before{ transform:translateY(-6px); }
+.menu-toggle span::after{ transform:translateY(6px); }
+.menu-toggle[aria-expanded="true"] span{ background:transparent; }
+.menu-toggle[aria-expanded="true"] span::before{ transform:translateY(0) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span::after{ transform:translateY(0) rotate(-45deg); }
+.nav-cta-mobile{ display:none; }
+
+@media (max-width:720px){
+  /* --- nav: compact single row + slide-down menu --- */
+  .nav-top{ padding:16px 20px; flex-wrap:nowrap; }
+  .nav-icons{ display:none; }               /* redundant with hero + contact section on phones */
+  .site-title{ font-size:14px; }
+  .nav-actions{ gap:10px; }
+  .nav-actions .btn-outline{ display:none; } /* CTA lives inside the menu instead, saves space */
+  .menu-toggle{ display:flex; }
+
+  nav.links{
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:8px 20px 18px;
+  }
+  nav.links.open{ display:flex; }
+  nav.links a{
+    padding:14px 4px;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  nav.links a:last-child{ border-bottom:none; }
+  .nav-cta-mobile{
+    display:block; margin-top:10px; text-align:center; padding:13px;
+    border:1px solid var(--green); border-radius:8px;
+    color:var(--green-bright); font-weight:600; font-size:14px;
+    text-decoration:none;
+  }
+
+  /* --- hero --- */
+  .hero-avatar{ width:104px; height:104px; }
+  .hero-content{ gap:16px; padding:32px 22px; }
+  .hero-name{ font-size:clamp(26px,8vw,34px); }
+  .hero-tagline{ font-size:14.5px; }
+  .hero-cta{ width:100%; flex-direction:column; gap:12px; }
+  .hero-cta a{ width:100%; text-align:center; }
+  .scroll-hint{ bottom:16px; }
+
+  /* --- section rhythm & type scale --- */
+  .section-head{ margin-bottom:32px; }
+  .split-body h2.display{ font-size:28px; }
+  .split-body .lead{ font-size:15px; }
+
+  /* --- triptych --- */
+  .triptych-col{ padding:0 8px; }
+
+  /* --- skills chips: comfortable tap size --- */
+  .skill-chip{ padding:12px 16px; font-size:14px; flex:1 1 auto; justify-content:center; }
+
+  /* --- contact --- */
+  .contact-visual{ max-width:220px; margin:0 auto; }
+  .contact-initial{ font-size:64px; }
+  .contact-row{ padding:16px 0; }
+  .contact-row .v{ font-size:14.5px; }
+
+  /* --- buttons: full-width, easy to tap --- */
+  .btn-solid, .btn-outline-invert{
+    display:block; width:100%; text-align:center; padding:15px 22px;
+  }
+  #project .split-body > a.btn-solid + a{
+    display:block; margin-inline-start:0 !important; margin-top:14px; text-align:center;
+  }
+
+  /* --- projects page --- */
+  .page-header{ padding:56px 0 40px; }
+  .card-body{ padding:20px; }
+}
+
+@media (max-width:420px){
+  .wrap{ padding:0 18px; }
+  .hero-name{ font-size:24px; }
+  .hero-avatar{ width:92px; height:92px; }
+  section{ padding:44px 0; }
+}
