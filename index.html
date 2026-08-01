@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خالد القاضي — مطور ومصمم واجهات مواقع</title>
+<meta name="description" content="خالد القاضي، مطور مواقع ومصمم واجهات مستخدم (UI/UX). أبني مواقع بروفايل احترافية للشركات الناشئة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Protofile.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-top wrap">
+    <div class="nav-icons">
+      <a href="mailto:khaledkadi188@gmail.com" aria-label="Email" class="icon-link">✉</a>
+      <a href="tel:+966581948160" aria-label="Phone" class="icon-link">☎</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-link">in</a>
+    </div>
+    <a href="#top" class="site-title" data-i18n="brandName">خالد القاضي</a>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle">EN</button>
+      <a href="#contact" class="btn-outline" data-i18n="navCta">تواصل معي</a>
+    </div>
+  </div>
+  <nav class="links wrap">
+    <a href="#about" data-i18n="navAbout">نبذة</a>
+    <a href="#skills" data-i18n="navSkills">المهارات</a>
+    <a href="projects.html" data-i18n="navProject">المشاريع</a>
+    <a href="#services" data-i18n="navServices">الخدمات</a>
+    <a href="#contact" data-i18n="navContact">تواصل</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="constellation" class="constellation-bg" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <span class="eyebrow" data-i18n="heroEyebrow">دليلك لموقع يعكس مشروعك</span>
+
+      <div class="hero-avatar">
+        <!-- ضع صورتك بجانب index.html بنفس اسم الملف "your-photo.jpg"، أو غيّر اسم الملف هنا في الكود -->
+        <img src="/Photo/IMG_0021.JPG.jpeg" alt="خالد القاضي" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="avatar-fallback">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="36" r="18" fill="none" stroke="currentColor" stroke-width="4" style="color:var(--text-lo)"/><path d="M18 88c4-22 22-34 32-34s28 12 32 34" fill="none" stroke="currentColor" stroke-width="4" style="color:var(--text-lo)"/></svg>
+        </div>
+      </div>
+
+      <h1 class="display hero-name" data-i18n="brandName">خالد القاضي</h1>
+      <p class="hero-tagline" data-i18n="heroTagline">مطوّر مواقع ومصمم واجهات UI/UX — أبني مواقع بروفايل احترافية للشركات</p>
+
+      <div class="hero-socials">
+        <a href="mailto:khaledkadi188@gmail.com" aria-label="Email" class="icon-link">✉</a>
+        <a href="tel:+966581948160" aria-label="Phone" class="icon-link">☎</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-link">in</a>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn-solid" data-i18n="navCta">تواصل معي</a>
+        <a href="projects.html" class="btn-outline-invert" data-i18n="viewAllProjects">شاهد أعمالي</a>
+      </div>
+    </div>
+    <span class="scroll-hint">↓</span>
+  </section>
+
+  <!-- SERVICES TRIPTYCH -->
+  <section id="services" class="triptych">
+    <div class="wrap">
+      <h2 class="display center" data-i18n="workTitle">كيف أقدر أساعد مشروعك</h2>
+      <div class="triptych-grid">
+        <div class="triptych-col">
+          <h3 data-i18n="serv1Title">مواقع تعريفية للشركات</h3>
+          <p data-i18n="serv1Body">موقع بروفايل احترافي يعرّف بعملك وخدماتك بشكل واضح وسهل الوصول.</p>
+          <a href="#project" data-i18n="learnMore">اعرف أكثر</a>
+        </div>
+        <div class="triptych-col">
+          <h3 data-i18n="serv2Title">تصميم واجهات UI/UX</h3>
+          <p data-i18n="serv2Body">تصميم واجهة مستخدم مريحة ومنظمة، تسهّل على الزائر إيجاد ما يبحث عنه.</p>
+          <a href="#skills" data-i18n="learnMore">اعرف أكثر</a>
+        </div>
+        <div class="triptych-col">
+          <h3 data-i18n="serv3Title">تطوير بـ HTML/CSS</h3>
+          <p data-i18n="serv3Body">برمجة الموقع بكود نظيف ومتجاوب يعمل بشكل جيد على كل الأجهزة.</p>
+          <a href="#contact" data-i18n="learnMore">اعرف أكثر</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <!-- SPLIT: ABOUT / APPROACH -->
+  <section id="about" class="split">
+    <div class="wrap split-grid">
+      <div class="split-media">
+        <span class="tag" data-i18n="aboutTag">من أنا</span>
+        <div class="media-box">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
+            <rect width="400" height="400" fill="#12151A"/>
+            <g stroke="#3A4640" stroke-width="1" opacity="0.6">
+              <line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="130" x2="400" y2="130"/>
+              <line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="270" x2="400" y2="270"/>
+              <line x1="0" y1="340" x2="400" y2="340"/><line x1="70" y1="0" x2="70" y2="400"/>
+              <line x1="140" y1="0" x2="140" y2="400"/><line x1="260" y1="0" x2="260" y2="400"/>
+              <line x1="330" y1="0" x2="330" y2="400"/>
+            </g>
+            <circle cx="200" cy="200" r="70" fill="none" stroke="#46B37A" stroke-width="3"/>
+            <text x="200" y="216" text-anchor="middle" font-size="72" font-family="Tajawal, sans-serif" font-weight="800" fill="#F3F5F2">خ</text>
+          </svg>
+        </div>
+      </div>
+      <div class="split-body">
+        <h2 class="display" data-i18n="aboutTitle">من أنا</h2>
+        <p class="lead" data-i18n="aboutBody">مطوّر ومصمم مواقع، أعمل على بناء مواقع بروفايل للشركات من الفكرة إلى موقع جاهز يعمل بشكل كامل — من واجهة الاستخدام إلى الكود. أهتم بأن يكون كل موقع أصممه واضحاً وسهل الاستخدام، ويعكس هوية صاحب العمل بدقة، مع خلفية عملية في تصميم واجهات المستخدم (UI/UX).</p>
+        <div class="two-col">
+          <div>
+            <h4 data-i18n="tryNewTitle">تحتاج موقعاً من الصفر</h4>
+            <p data-i18n="tryNewBody">تصفح مهاراتي والأدوات التي أعمل بها لبناء موقعك من البداية.</p>
+            <a href="#skills" data-i18n="skillsLink">استعرض المهارات</a>
+          </div>
+          <div>
+            <h4 data-i18n="targetTitle">لديك احتياج محدد</h4>
+            <p data-i18n="targetBody">لو عندك فكرة أو مشكلة واضحة في موقعك الحالي، ابدأ بمحادثة قصيرة معي.</p>
+            <a href="#contact" data-i18n="scheduleLink">تواصل معي</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag" data-i18n="skillsTag">الأدوات</span>
+        <h2 class="display" data-i18n="skillsTitle">المهارات التقنية</h2>
+      </div>
+      <div class="skills-wrap">
+        <div class="skill-chip"><span class="skill-dot"></span>HTML5</div>
+        <div class="skill-chip"><span class="skill-dot"></span>CSS3</div>
+        <div class="skill-chip"><span class="skill-dot"></span><span data-i18n="skillResponsive">تصميم متجاوب (Responsive)</span></div>
+        <div class="skill-chip"><span class="skill-dot"></span><span data-i18n="skillUiUx">تصميم واجهات UI/UX</span></div>
+        <div class="skill-chip"><span class="skill-dot"></span><span data-i18n="skillProfile">مواقع بروفايل الشركات</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <!-- PROJECT SPLIT (CTA style like reference coaching section) -->
+  <section id="project" class="split alt">
+    <div class="wrap split-grid">
+      <div class="split-media">
+        <span class="tag" data-i18n="projectTag">مشروع منجز</span>
+        <div class="media-box">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
+            <rect width="400" height="400" fill="#12151A"/>
+            <g fill="#46B37A" opacity="0.85">
+              <rect x="40" y="220" width="55" height="140"/>
+              <rect x="110" y="160" width="60" height="200"/>
+              <rect x="180" y="90" width="60" height="270"/>
+              <rect x="250" y="180" width="55" height="180"/>
+              <rect x="310" y="140" width="55" height="220"/>
+            </g>
+            <line x1="20" y1="360" x2="380" y2="360" stroke="#F3F5F2" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
+      <div class="split-body">
+        <h2 class="display" data-i18n="projectTitle">موقع شركة مقاولات ناشئة</h2>
+        <p class="lead" data-i18n="projectCardBody">موقع إلكتروني متكامل صُمم وبُرمج بالكامل لتعريف الزوار بخدمات الشركة ومجالات عملها، بتصميم واضح يناسب طبيعة قطاع المقاولات ويسهّل على العملاء الوصول لمعلومات التواصل.</p>
+        <ul class="project-list">
+          <li data-i18n="projectF1">صفحة رئيسية تعرض هوية الشركة وخدماتها</li>
+          <li data-i18n="projectF2">صفحة "من نحن" وتعريف بمجال العمل</li>
+          <li data-i18n="projectF3">صفحة الخدمات ومجالات المقاولات</li>
+          <li data-i18n="projectF4">صفحة تواصل مع بيانات الشركة</li>
+        </ul>
+        <a href="#contact" class="btn-solid" data-i18n="bookCta">ناقش مشروعك معي</a>
+        <a href="projects.html" class="card-link" style="display:inline-block; margin-inline-start:20px;" data-i18n="viewAllProjects">شاهد جميع المشاريع</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <!-- INSPIRATION EXAMPLES -->
+  <section id="examples">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag" data-i18n="examplesTag">أفكار وإلهام</span>
+        <h2 class="display" data-i18n="examplesTitle">أمثلة على مواقع أقدر أبنيها</h2>
+        <p class="lead" data-i18n="examplesLead">مواقع حقيقية من الإنترنت، لتوضيح نوعية المشاريع التي أقدر أصممها وأطورها لك.</p>
+      </div>
+      <div class="examples-grid">
+        <a class="example-card tone-a" href="https://igcco.net/en/" target="_blank" rel="noopener">
+          <span class="example-icon">🏗️</span>
+          <h3 data-i18n="ex1Title">بروفايل شركة مقاولات</h3>
+          <p data-i18n="ex1Body">موقع تعريفي متكامل لشركة مقاولات: نبذة عن الشركة، المشاريع المنجزة، الوظائف، وبيانات التواصل.</p>
+          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
+        </a>
+        <a class="example-card tone-b" href="https://saudi.vezeeta.com/ar" target="_blank" rel="noopener">
+          <span class="example-icon">🩺</span>
+          <h3 data-i18n="ex2Title">منصة حجز مواعيد طبية</h3>
+          <p data-i18n="ex2Body">موقع لحجز الكشف عند الأطباء أونلاين، بحث حسب التخصص والمدينة، وصفحات تفصيلية لكل عيادة.</p>
+          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
+        </a>
+        <a class="example-card tone-c" href="https://redston.sa/ar" target="_blank" rel="noopener">
+          <span class="example-icon">🥩</span>
+          <h3 data-i18n="ex3Title">مطعم مع متجر إلكتروني</h3>
+          <p data-i18n="ex3Body">موقع مطعم يعرض القصة والقائمة، ويتيح الطلب والحجز أونلاين من نفس الموقع.</p>
+          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
+        </a>
+        <a class="example-card tone-d" href="https://mawad.com/" target="_blank" rel="noopener">
+          <span class="example-icon">🧱</span>
+          <h3 data-i18n="ex4Title">متجر مواد بناء إلكتروني</h3>
+          <p data-i18n="ex4Body">متجر أونلاين متخصص ببيع مواد ومستلزمات البناء، مع كتالوج منتجات وطلب توصيل مباشر.</p>
+          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
+        </a>
+      </div>
+      <p class="examples-note" data-i18n="examplesNote">* هذه المواقع أمثلة من الإنترنت لتوضيح نوعية العمل وليست من تصميمي — أقدر أبني لك موقعاً مشابهاً بالكامل من الصفر.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-inner">
+        <div>
+          <span class="tag" data-i18n="contactTag">تواصل</span>
+          <h2 class="display" data-i18n="contactTitle">لنبدأ مشروعك القادم</h2>
+          <p class="lead" data-i18n="contactLead">تواصل معي مباشرة عبر أي من الوسائل التالية.</p>
+          <div class="contact-list">
+            <a class="contact-row" href="tel:+966581948160">
+              <span class="k" data-i18n="contactPhoneK">الهاتف / واتساب</span>
+              <span class="v">+966 58 194 8160</span>
+            </a>
+            <a class="contact-row" href="mailto:khaledkadi188@gmail.com">
+              <span class="k" data-i18n="contactEmailK">البريد الإلكتروني</span>
+              <span class="v">khaledkadi188@gmail.com</span>
+            </a>
+            <a class="contact-row" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              <span class="k">LinkedIn</span>
+              <span class="v">MHD KHALED ALKADI</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-visual" aria-hidden="true">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <span class="contact-initial">خ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="footerText">خالد القاضي — مطور ومصمم واجهات مواقع</span>
+  </div>
+</footer>
+
+<script>
+  const translations = {
+    ar: {
+      brandName:"خالد القاضي", navAbout:"نبذة", navSkills:"المهارات", navProject:"المشاريع", navServices:"الخدمات", navContact:"تواصل", navCta:"تواصل معي",
+      heroEyebrow:"دليلك لموقع يعكس مشروعك",
+      heroTagline:"مطوّر مواقع ومصمم واجهات UI/UX — أبني مواقع بروفايل احترافية للشركات",
+      workTitle:"كيف أقدر أساعد مشروعك",
+      serv1Title:"مواقع تعريفية للشركات", serv1Body:"موقع بروفايل احترافي يعرّف بعملك وخدماتك بشكل واضح وسهل الوصول.",
+      serv2Title:"تصميم واجهات UI/UX", serv2Body:"تصميم واجهة مستخدم مريحة ومنظمة، تسهّل على الزائر إيجاد ما يبحث عنه.",
+      serv3Title:"تطوير بـ HTML/CSS", serv3Body:"برمجة الموقع بكود نظيف ومتجاوب يعمل بشكل جيد على كل الأجهزة.",
+      learnMore:"اعرف أكثر",
+      aboutTag:"من أنا", aboutTitle:"من أنا",
+      aboutBody:"مطوّر ومصمم مواقع، أعمل على بناء مواقع بروفايل للشركات من الفكرة إلى موقع جاهز يعمل بشكل كامل — من واجهة الاستخدام إلى الكود. أهتم بأن يكون كل موقع أصممه واضحاً وسهل الاستخدام، ويعكس هوية صاحب العمل بدقة، مع خلفية عملية في تصميم واجهات المستخدم (UI/UX).",
+      tryNewTitle:"تحتاج موقعاً من الصفر", tryNewBody:"تصفح مهاراتي والأدوات التي أعمل بها لبناء موقعك من البداية.", skillsLink:"استعرض المهارات",
+      targetTitle:"لديك احتياج محدد", targetBody:"لو عندك فكرة أو مشكلة واضحة في موقعك الحالي، ابدأ بمحادثة قصيرة معي.", scheduleLink:"تواصل معي",
+      skillsTag:"الأدوات", skillsTitle:"المهارات التقنية",
+      skillResponsive:"تصميم متجاوب (Responsive)", skillUiUx:"تصميم واجهات UI/UX", skillProfile:"مواقع بروفايل الشركات",
+      projectTag:"مشروع منجز", projectTitle:"موقع شركة مقاولات ناشئة",
+      projectCardBody:"موقع إلكتروني متكامل صُمم وبُرمج بالكامل لتعريف الزوار بخدمات الشركة ومجالات عملها، بتصميم واضح يناسب طبيعة قطاع المقاولات ويسهّل على العملاء الوصول لمعلومات التواصل.",
+      projectF1:"صفحة رئيسية تعرض هوية الشركة وخدماتها",
+      projectF2:'صفحة "من نحن" وتعريف بمجال العمل',
+      projectF3:"صفحة الخدمات ومجالات المقاولات",
+      projectF4:"صفحة تواصل مع بيانات الشركة",
+      bookCta:"ناقش مشروعك معي",
+      viewAllProjects:"شاهد جميع المشاريع",
+      examplesTag:"أفكار وإلهام", examplesTitle:"أمثلة على مواقع أقدر أبنيها",
+      examplesLead:"مواقع حقيقية من الإنترنت، لتوضيح نوعية المشاريع التي أقدر أصممها وأطورها لك.",
+      ex1Title:"بروفايل شركة مقاولات",
+      ex1Body:"موقع تعريفي متكامل لشركة مقاولات: نبذة عن الشركة، المشاريع المنجزة، الوظائف، وبيانات التواصل.",
+      ex2Title:"منصة حجز مواعيد طبية",
+      ex2Body:"موقع لحجز الكشف عند الأطباء أونلاين، بحث حسب التخصص والمدينة، وصفحات تفصيلية لكل عيادة.",
+      ex3Title:"مطعم مع متجر إلكتروني",
+      ex3Body:"موقع مطعم يعرض القصة والقائمة، ويتيح الطلب والحجز أونلاين من نفس الموقع.",
+      ex4Title:"متجر مواد بناء إلكتروني",
+      ex4Body:"متجر أونلاين متخصص ببيع مواد ومستلزمات البناء، مع كتالوج منتجات وطلب توصيل مباشر.",
+      visitSite:"زيارة الموقع",
+      examplesNote:"* هذه المواقع أمثلة من الإنترنت لتوضيح نوعية العمل وليست من تصميمي — أقدر أبني لك موقعاً مشابهاً بالكامل من الصفر.",
+      contactTag:"تواصل", contactTitle:"لنبدأ مشروعك القادم", contactLead:"تواصل معي مباشرة عبر أي من الوسائل التالية.",
+      contactPhoneK:"الهاتف / واتساب", contactEmailK:"البريد الإلكتروني",
+      footerText:"خالد القاضي — مطور ومصمم واجهات مواقع"
+    },
+    en: {
+      brandName:"Khaled Alkadi", navAbout:"About", navSkills:"Skills", navProject:"Projects", navServices:"Services", navContact:"Contact", navCta:"Get in touch",
+      heroEyebrow:"Your guide to a site that fits your business",
+      heroTagline:"Web developer & UI/UX designer — I build professional profile sites for businesses",
+      workTitle:"How I can help your project",
+      serv1Title:"Company profile websites", serv1Body:"A professional profile site that introduces your business and services clearly.",
+      serv2Title:"UI/UX design", serv2Body:"Clear, organized interface design that helps visitors find what they need.",
+      serv3Title:"HTML/CSS development", serv3Body:"Clean, responsive code that works well across every device.",
+      learnMore:"Learn more",
+      aboutTag:"About", aboutTitle:"Who I am",
+      aboutBody:"A web developer and designer who builds company profile websites from concept to a fully working site — from the interface to the code. I care about making every site I design clear and easy to use, accurately reflecting the business behind it, with hands-on grounding in UI/UX design.",
+      tryNewTitle:"Starting from scratch", tryNewBody:"Browse my skills and the tools I use to build your site from the ground up.", skillsLink:"See my skills",
+      targetTitle:"Have a specific need", targetBody:"If you have a clear idea or an issue with your current site, let's talk.", scheduleLink:"Get in touch",
+      skillsTag:"Toolkit", skillsTitle:"Technical skills",
+      skillResponsive:"Responsive design", skillUiUx:"UI/UX design", skillProfile:"Company profile sites",
+      projectTag:"Completed project", projectTitle:"Growing construction company website",
+      projectCardBody:"A complete website designed and built to introduce visitors to the company's services and areas of work, with a clear layout suited to the construction sector and easy access to contact information.",
+      projectF1:"Homepage showcasing the company's identity and services",
+      projectF2:'An "About us" page introducing the business',
+      projectF3:"A services page covering construction specialties",
+      projectF4:"A contact page with company details",
+      bookCta:"Discuss your project",
+      viewAllProjects:"View all projects",
+      examplesTag:"Inspiration", examplesTitle:"Examples of sites I can build",
+      examplesLead:"Real websites from around the web, showing the kind of projects I can design and build for you.",
+      ex1Title:"Contracting company profile",
+      ex1Body:"A complete profile site for a contracting company: about the company, completed projects, careers, and contact details.",
+      ex2Title:"Medical appointment booking platform",
+      ex2Body:"A site for booking doctor appointments online, searchable by specialty and city, with detailed clinic pages.",
+      ex3Title:"Restaurant with online store",
+      ex3Body:"A restaurant site that tells its story and menu, while letting customers order and book a table online.",
+      ex4Title:"Building materials online store",
+      ex4Body:"An online store specialized in construction materials and supplies, with a product catalog and direct delivery ordering.",
+      visitSite:"Visit website",
+      examplesNote:"* These sites are examples from the web to illustrate the type of work, not designed by me — I can build you a similar site fully from scratch.",
+      contactTag:"Contact", contactTitle:"Let's start your next project", contactLead:"Reach out directly through any of the channels below.",
+      contactPhoneK:"Phone / WhatsApp", contactEmailK:"Email",
+      footerText:"Khaled Alkadi — Web Developer & UI/UX Designer"
+    }
+  };
+
+  const langToggle = document.getElementById('langToggle');
+  const htmlEl = document.documentElement;
+
+  function applyLang(lang){
+    const dict = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined){ el.innerHTML = dict[key]; }
+    });
+    htmlEl.setAttribute('lang', lang);
+    htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    langToggle.textContent = lang === 'ar' ? 'EN' : 'عربي';
+    langToggle.setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
+  }
+
+  let currentLang = 'ar';
+  langToggle.addEventListener('click', ()=>{
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    applyLang(currentLang);
+  });
+
+  applyLang(currentLang);
+</script>
+
+<script>
+  (function(){
+    const canvas = document.getElementById('constellation');
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const heroEl = document.getElementById('hero');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const styles = getComputedStyle(document.documentElement);
+    const dotColor = styles.getPropertyValue('--dot').trim() || '#CBD3CE';
+    const lineColor = styles.getPropertyValue('--star-line').trim() || 'rgba(203,211,206,0.3)';
+
+    let w = 0, h = 0, dpr = 1, particles = [], raf = null, t = 0;
+
+    function resize(){
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = heroEl.clientWidth;
+      h = heroEl.clientHeight;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      seed();
+    }
+
+    function seed(){
+      const density = 12000;
+      const count = Math.max(30, Math.min(85, Math.floor((w * h) / density)));
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.16,
+        vy: (Math.random() - 0.5) * 0.16,
+        r: Math.random() * 1.3 + 0.7,
+        phase: Math.random() * Math.PI * 2
+      }));
+    }
+
+    function frame(){
+      t += 0.015;
+      ctx.clearRect(0, 0, w, h);
+      const linkDist = Math.min(150, w * 0.15);
+
+      if(!reduceMotion){
+        for(const p of particles){
+          p.x += p.vx; p.y += p.vy;
+          if(p.x < -20) p.x = w + 20; if(p.x > w + 20) p.x = -20;
+          if(p.y < -20) p.y = h + 20; if(p.y > h + 20) p.y = -20;
+        }
+      }
+
+      for(let i = 0; i < particles.length; i++){
+        for(let j = i + 1; j < particles.length; j++){
+          const a = particles[i], b = particles[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if(dist < linkDist){
+            ctx.globalAlpha = (1 - dist / linkDist) * 0.6;
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = dotColor;
+      for(const p of particles){
+        const twinkle = reduceMotion ? 1 : (0.7 + Math.sin(t * 1.4 + p.phase) * 0.3);
+        ctx.globalAlpha = twinkle;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+
+      if(!reduceMotion){ raf = requestAnimationFrame(frame); }
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    frame();
+  })();
+</script>
+
+</body>
+</html>
