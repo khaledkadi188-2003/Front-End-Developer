@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="Protofile.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -23,14 +23,18 @@
     <div class="nav-actions">
       <button class="lang-btn" id="langToggle">EN</button>
       <a href="index.html#contact" class="btn-outline" data-i18n="navCta">تواصل معي</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
     </div>
   </div>
-  <nav class="links wrap">
+  <nav class="links wrap" id="navLinks">
     <a href="index.html#about" data-i18n="navAbout">نبذة</a>
     <a href="index.html#skills" data-i18n="navSkills">المهارات</a>
     <a href="projects.html" data-i18n="navProjects">المشاريع</a>
     <a href="index.html#services" data-i18n="navServices">الخدمات</a>
     <a href="index.html#contact" data-i18n="navContact">تواصل</a>
+    <a href="index.html#contact" class="nav-cta-mobile" data-i18n="navCta">تواصل معي</a>
   </nav>
 </header>
 
@@ -57,13 +61,13 @@
         <article class="project-card-sm">
           <div class="card-media">
             <svg viewBox="0 0 400 260" aria-hidden="true">
-              <rect width="400" height="260" fill="#12151A"/>
-              <rect x="24" y="24" width="352" height="212" rx="8" fill="#F3F5F2" opacity="0.05"/>
-              <rect x="24" y="24" width="352" height="30" rx="6" fill="#181C21"/>
-              <circle cx="42" cy="39" r="5" fill="#46B37A"/><circle cx="58" cy="39" r="5" fill="#46B37A" opacity="0.6"/><circle cx="74" cy="39" r="5" fill="#46B37A" opacity="0.35"/>
-              <rect x="44" y="80" width="140" height="14" rx="4" fill="#46B37A"/>
-              <rect x="44" y="106" width="220" height="9" rx="3" fill="#F3F5F2" opacity="0.5"/>
-              <rect x="44" y="124" width="190" height="9" rx="3" fill="#F3F5F2" opacity="0.3"/>
+              <rect width="400" height="260" fill="#181C21"/>
+              <rect x="24" y="24" width="352" height="212" rx="8" fill="#F3F5F2" opacity="0.06"/>
+              <rect x="24" y="24" width="352" height="30" rx="6" fill="#46B37A"/>
+              <circle cx="42" cy="39" r="5" fill="#F3F5F2"/><circle cx="58" cy="39" r="5" fill="#F3F5F2" opacity="0.6"/><circle cx="74" cy="39" r="5" fill="#F3F5F2" opacity="0.35"/>
+              <rect x="44" y="80" width="140" height="14" rx="4" fill="#6FE0A6"/>
+              <rect x="44" y="106" width="220" height="9" rx="3" fill="#F3F5F2" opacity="0.55"/>
+              <rect x="44" y="124" width="190" height="9" rx="3" fill="#F3F5F2" opacity="0.35"/>
               <rect x="44" y="152" width="100" height="30" rx="7" fill="#46B37A"/>
             </svg>
           </div>
@@ -106,8 +110,8 @@
         <article class="project-card-sm">
           <div class="card-media">
             <svg viewBox="0 0 400 260" aria-hidden="true">
-              <rect width="400" height="260" fill="#12151A"/>
-              <g fill="#46B37A" opacity="0.85">
+              <rect width="400" height="260" fill="#181C21"/>
+              <g fill="#46B37A" opacity="0.9">
                 <rect x="40" y="140" width="36" height="90"/>
                 <rect x="88" y="100" width="40" height="130"/>
                 <rect x="140" y="60" width="40" height="170"/>
@@ -115,7 +119,7 @@
                 <rect x="240" y="90" width="36" height="140"/>
               </g>
               <line x1="24" y1="230" x2="376" y2="230" stroke="#F3F5F2" stroke-width="3"/>
-              <rect x="290" y="40" width="86" height="24" rx="12" fill="#F3F5F2" opacity="0.92"/>
+              <rect x="290" y="40" width="86" height="24" rx="12" fill="#F3F5F2" opacity="0.9"/>
               <text x="333" y="57" text-anchor="middle" font-size="12" font-family="JetBrains Mono, monospace" fill="#0B0D0F">مقاولات</text>
             </svg>
           </div>
@@ -145,46 +149,6 @@
         </article>
 
       </div>
-    </div>
-  </section>
-
-  <div class="wrap"><hr class="rule"></div>
-
-  <!-- INSPIRATION EXAMPLES -->
-  <section id="examples">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="tag" data-i18n="examplesTag">أفكار وإلهام</span>
-        <h2 class="display" data-i18n="examplesTitle">أمثلة على مواقع أقدر أبنيها</h2>
-        <p class="lead" data-i18n="examplesLead">مواقع حقيقية من الإنترنت، لتوضيح نوعية المشاريع التي أقدر أصممها وأطورها لك.</p>
-      </div>
-      <div class="examples-grid">
-        <a class="example-card tone-a" href="https://igcco.net/en/" target="_blank" rel="noopener">
-          <span class="example-icon">🏗️</span>
-          <h3 data-i18n="ex1Title">بروفايل شركة مقاولات</h3>
-          <p data-i18n="ex1Body">موقع تعريفي متكامل لشركة مقاولات: نبذة عن الشركة، المشاريع المنجزة، الوظائف، وبيانات التواصل.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-        <a class="example-card tone-b" href="https://saudi.vezeeta.com/ar" target="_blank" rel="noopener">
-          <span class="example-icon">🩺</span>
-          <h3 data-i18n="ex2Title">منصة حجز مواعيد طبية</h3>
-          <p data-i18n="ex2Body">موقع لحجز الكشف عند الأطباء أونلاين، بحث حسب التخصص والمدينة، وصفحات تفصيلية لكل عيادة.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-        <a class="example-card tone-c" href="https://redston.sa/ar" target="_blank" rel="noopener">
-          <span class="example-icon">🥩</span>
-          <h3 data-i18n="ex3Title">مطعم مع متجر إلكتروني</h3>
-          <p data-i18n="ex3Body">موقع مطعم يعرض القصة والقائمة، ويتيح الطلب والحجز أونلاين من نفس الموقع.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-        <a class="example-card tone-d" href="https://mawad.com/" target="_blank" rel="noopener">
-          <span class="example-icon">🧱</span>
-          <h3 data-i18n="ex4Title">متجر مواد بناء إلكتروني</h3>
-          <p data-i18n="ex4Body">متجر أونلاين متخصص ببيع مواد ومستلزمات البناء، مع كتالوج منتجات وطلب توصيل مباشر.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-      </div>
-      <p class="examples-note" data-i18n="examplesNote">* هذه المواقع أمثلة من الإنترنت لتوضيح نوعية العمل وليست من تصميمي — أقدر أبني لك موقعاً مشابهاً بالكامل من الصفر.</p>
     </div>
   </section>
 
@@ -221,18 +185,6 @@
       profileF4:"صفحة تواصل مع بيانات الشركة",
       ptagUx:"UI/UX",
       placeholderTitle2:"بروفايل الشركة القادمة هنا", placeholderBody2:"مساحة جاهزة لإضافة بروفايل الشركة القادمة بمجرد الانتهاء منه.",
-      examplesTag:"أفكار وإلهام", examplesTitle:"أمثلة على مواقع أقدر أبنيها",
-      examplesLead:"مواقع حقيقية من الإنترنت، لتوضيح نوعية المشاريع التي أقدر أصممها وأطورها لك.",
-      ex1Title:"بروفايل شركة مقاولات",
-      ex1Body:"موقع تعريفي متكامل لشركة مقاولات: نبذة عن الشركة، المشاريع المنجزة، الوظائف، وبيانات التواصل.",
-      ex2Title:"منصة حجز مواعيد طبية",
-      ex2Body:"موقع لحجز الكشف عند الأطباء أونلاين، بحث حسب التخصص والمدينة، وصفحات تفصيلية لكل عيادة.",
-      ex3Title:"مطعم مع متجر إلكتروني",
-      ex3Body:"موقع مطعم يعرض القصة والقائمة، ويتيح الطلب والحجز أونلاين من نفس الموقع.",
-      ex4Title:"متجر مواد بناء إلكتروني",
-      ex4Body:"متجر أونلاين متخصص ببيع مواد ومستلزمات البناء، مع كتالوج منتجات وطلب توصيل مباشر.",
-      visitSite:"زيارة الموقع",
-      examplesNote:"* هذه المواقع أمثلة من الإنترنت لتوضيح نوعية العمل وليست من تصميمي — أقدر أبني لك موقعاً مشابهاً بالكامل من الصفر.",
       ctaTitle:"عندك فكرة لمشروع؟", ctaBtn:"لنتحدث عنها",
       footerText:"خالد القاضي — مطور ومصمم واجهات مواقع"
     },
@@ -252,18 +204,6 @@
       profileF4:"A contact page with company details",
       ptagUx:"UI/UX",
       placeholderTitle2:"Next company profile here", placeholderBody2:"A ready spot to add the next company profile once it's done.",
-      examplesTag:"Inspiration", examplesTitle:"Examples of sites I can build",
-      examplesLead:"Real websites from around the web, showing the kind of projects I can design and build for you.",
-      ex1Title:"Contracting company profile",
-      ex1Body:"A complete profile site for a contracting company: about the company, completed projects, careers, and contact details.",
-      ex2Title:"Medical appointment booking platform",
-      ex2Body:"A site for booking doctor appointments online, searchable by specialty and city, with detailed clinic pages.",
-      ex3Title:"Restaurant with online store",
-      ex3Body:"A restaurant site that tells its story and menu, while letting customers order and book a table online.",
-      ex4Title:"Building materials online store",
-      ex4Body:"An online store specialized in construction materials and supplies, with a product catalog and direct delivery ordering.",
-      visitSite:"Visit website",
-      examplesNote:"* These sites are examples from the web to illustrate the type of work, not designed by me — I can build you a similar site fully from scratch.",
       ctaTitle:"Have a project in mind?", ctaBtn:"Let's talk about it",
       footerText:"Khaled Alkadi — Web Developer & UI/UX Designer"
     }
@@ -291,6 +231,22 @@
   });
 
   applyLang(currentLang);
+
+  // ---- mobile hamburger menu ----
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if(menuToggle && navLinks){
+    menuToggle.addEventListener('click', ()=>{
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 </script>
 
 </body>
