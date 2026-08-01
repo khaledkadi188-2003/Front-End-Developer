@@ -23,47 +23,48 @@
     <div class="nav-actions">
       <button class="lang-btn" id="langToggle">EN</button>
       <a href="#contact" class="btn-outline" data-i18n="navCta">تواصل معي</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
     </div>
   </div>
-  <nav class="links wrap">
+  <nav class="links wrap" id="navLinks">
     <a href="#about" data-i18n="navAbout">نبذة</a>
     <a href="#skills" data-i18n="navSkills">المهارات</a>
-    <a href="#Projects.html" data-i18n="navProject">المشاريع</a>
+    <a href="Projects.html" data-i18n="navProject">المشاريع</a>
     <a href="#services" data-i18n="navServices">الخدمات</a>
     <a href="#contact" data-i18n="navContact">تواصل</a>
+    <a href="#contact" class="nav-cta-mobile" data-i18n="navCta">تواصل معي</a>
   </nav>
 </header>
 
 <main id="top">
   <!-- HERO -->
-  <section class="hero" id="hero">
-    <canvas id="constellation" class="constellation-bg" aria-hidden="true"></canvas>
+  <section class="hero">
+    <canvas class="constellation-bg" id="starCanvas" aria-hidden="true"></canvas>
     <div class="hero-content">
-      <span class="eyebrow" data-i18n="heroEyebrow">دليلك لموقع يعكس مشروعك</span>
-
       <div class="hero-avatar">
-        <!-- ضع صورتك بجانب index.html بنفس اسم الملف "your-photo.jpg"، أو غيّر اسم الملف هنا في الكود -->
-        <img src="Photo/IMG_0021.JPG.jpeg" alt="خالد القاضي" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="avatar-fallback">
-          <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="36" r="18" fill="none" stroke="currentColor" stroke-width="4" style="color:var(--text-lo)"/><path d="M18 88c4-22 22-34 32-34s28 12 32 34" fill="none" stroke="currentColor" stroke-width="4" style="color:var(--text-lo)"/></svg>
+        <img src="your-photo.jpg" alt="خالد القاضي" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';">
+        <div class="avatar-fallback" id="avatarFallback" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/>
+          </svg>
         </div>
       </div>
-
-      <h1 class="display hero-name" data-i18n="brandName">خالد القاضي</h1>
-      <p class="hero-tagline" data-i18n="heroTagline">مطوّر مواقع ومصمم واجهات UI/UX — أبني مواقع بروفايل احترافية للشركات</p>
-
+      <h1 class="hero-name" data-i18n="brandName">خالد القاضي</h1>
+      <p class="hero-tagline" data-i18n="heroTagline">مطور مواقع ومصمم واجهات UI/UX</p>
       <div class="hero-socials">
         <a href="mailto:khaledkadi188@gmail.com" aria-label="Email" class="icon-link">✉</a>
         <a href="tel:+966581948160" aria-label="Phone" class="icon-link">☎</a>
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-link">in</a>
       </div>
-
       <div class="hero-cta">
-        <a href="#contact" class="btn-solid" data-i18n="navCta">تواصل معي</a>
-        <a href="#Projects.html" class="btn-outline-invert" data-i18n="viewAllProjects">شاهد أعمالي</a>
+        <a href="Projects.html" class="btn-solid" data-i18n="viewAllProjects">شاهد جميع المشاريع</a>
+        <a href="#contact" class="btn-outline-invert" data-i18n="navCta">تواصل معي</a>
       </div>
     </div>
-    <span class="scroll-hint">↓</span>
+    <span class="scroll-hint" aria-hidden="true">↓</span>
   </section>
 
   <!-- SERVICES TRIPTYCH -->
@@ -99,16 +100,16 @@
         <span class="tag" data-i18n="aboutTag">من أنا</span>
         <div class="media-box">
           <svg viewBox="0 0 400 400" aria-hidden="true">
-            <rect width="400" height="400" fill="#12151A"/>
-            <g stroke="#3A4640" stroke-width="1" opacity="0.6">
+            <rect width="400" height="400" fill="#181C21"/>
+            <g stroke="#7FB88A" stroke-width="1" opacity="0.55">
               <line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="130" x2="400" y2="130"/>
               <line x1="0" y1="200" x2="400" y2="200"/><line x1="0" y1="270" x2="400" y2="270"/>
               <line x1="0" y1="340" x2="400" y2="340"/><line x1="70" y1="0" x2="70" y2="400"/>
               <line x1="140" y1="0" x2="140" y2="400"/><line x1="260" y1="0" x2="260" y2="400"/>
               <line x1="330" y1="0" x2="330" y2="400"/>
             </g>
-            <circle cx="200" cy="200" r="70" fill="none" stroke="#46B37A" stroke-width="3"/>
-            <text x="200" y="216" text-anchor="middle" font-size="72" font-family="Tajawal, sans-serif" font-weight="800" fill="#F3F5F2">خ</text>
+            <circle cx="200" cy="200" r="70" fill="none" stroke="#2F6B45" stroke-width="3"/>
+            <text x="200" y="216" text-anchor="middle" font-size="72" font-family="Tajawal, sans-serif" font-weight="800" fill="#F4F7F4">خ</text>
           </svg>
         </div>
       </div>
@@ -157,15 +158,15 @@
         <span class="tag" data-i18n="projectTag">مشروع منجز</span>
         <div class="media-box">
           <svg viewBox="0 0 400 400" aria-hidden="true">
-            <rect width="400" height="400" fill="#12151A"/>
-            <g fill="#46B37A" opacity="0.85">
+            <rect width="400" height="400" fill="#181C21"/>
+            <g fill="#2F6B45" opacity="0.9">
               <rect x="40" y="220" width="55" height="140"/>
               <rect x="110" y="160" width="60" height="200"/>
               <rect x="180" y="90" width="60" height="270"/>
               <rect x="250" y="180" width="55" height="180"/>
               <rect x="310" y="140" width="55" height="220"/>
             </g>
-            <line x1="20" y1="360" x2="380" y2="360" stroke="#F3F5F2" stroke-width="3"/>
+            <line x1="20" y1="360" x2="380" y2="360" stroke="#F4F7F4" stroke-width="3"/>
           </svg>
         </div>
       </div>
@@ -181,46 +182,6 @@
         <a href="#contact" class="btn-solid" data-i18n="bookCta">ناقش مشروعك معي</a>
         <a href="projects.html" class="card-link" style="display:inline-block; margin-inline-start:20px;" data-i18n="viewAllProjects">شاهد جميع المشاريع</a>
       </div>
-    </div>
-  </section>
-
-  <div class="wrap"><hr class="rule"></div>
-
-  <!-- INSPIRATION EXAMPLES -->
-  <section id="examples">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="tag" data-i18n="examplesTag">أفكار وإلهام</span>
-        <h2 class="display" data-i18n="examplesTitle">أمثلة على مواقع أقدر أبنيها</h2>
-        <p class="lead" data-i18n="examplesLead">مواقع حقيقية من الإنترنت، لتوضيح نوعية المشاريع التي أقدر أصممها وأطورها لك.</p>
-      </div>
-      <div class="examples-grid">
-        <a class="example-card tone-a" href="https://igcco.net/en/" target="_blank" rel="noopener">
-          <span class="example-icon">🏗️</span>
-          <h3 data-i18n="ex1Title">بروفايل شركة مقاولات</h3>
-          <p data-i18n="ex1Body">موقع تعريفي متكامل لشركة مقاولات: نبذة عن الشركة، المشاريع المنجزة، الوظائف، وبيانات التواصل.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-        <a class="example-card tone-b" href="https://saudi.vezeeta.com/ar" target="_blank" rel="noopener">
-          <span class="example-icon">🩺</span>
-          <h3 data-i18n="ex2Title">منصة حجز مواعيد طبية</h3>
-          <p data-i18n="ex2Body">موقع لحجز الكشف عند الأطباء أونلاين، بحث حسب التخصص والمدينة، وصفحات تفصيلية لكل عيادة.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-        <a class="example-card tone-c" href="https://redston.sa/ar" target="_blank" rel="noopener">
-          <span class="example-icon">🥩</span>
-          <h3 data-i18n="ex3Title">مطعم مع متجر إلكتروني</h3>
-          <p data-i18n="ex3Body">موقع مطعم يعرض القصة والقائمة، ويتيح الطلب والحجز أونلاين من نفس الموقع.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-        <a class="example-card tone-d" href="https://mawad.com/" target="_blank" rel="noopener">
-          <span class="example-icon">🧱</span>
-          <h3 data-i18n="ex4Title">متجر مواد بناء إلكتروني</h3>
-          <p data-i18n="ex4Body">متجر أونلاين متخصص ببيع مواد ومستلزمات البناء، مع كتالوج منتجات وطلب توصيل مباشر.</p>
-          <span class="example-visit" data-i18n="visitSite">زيارة الموقع</span>
-        </a>
-      </div>
-      <p class="examples-note" data-i18n="examplesNote">* هذه المواقع أمثلة من الإنترنت لتوضيح نوعية العمل وليست من تصميمي — أقدر أبني لك موقعاً مشابهاً بالكامل من الصفر.</p>
     </div>
   </section>
 
@@ -267,8 +228,7 @@
   const translations = {
     ar: {
       brandName:"خالد القاضي", navAbout:"نبذة", navSkills:"المهارات", navProject:"المشاريع", navServices:"الخدمات", navContact:"تواصل", navCta:"تواصل معي",
-      heroEyebrow:"دليلك لموقع يعكس مشروعك",
-      heroTagline:"مطوّر مواقع ومصمم واجهات UI/UX — أبني مواقع بروفايل احترافية للشركات",
+      heroTagline:"مطور مواقع ومصمم واجهات UI/UX",
       workTitle:"كيف أقدر أساعد مشروعك",
       serv1Title:"مواقع تعريفية للشركات", serv1Body:"موقع بروفايل احترافي يعرّف بعملك وخدماتك بشكل واضح وسهل الوصول.",
       serv2Title:"تصميم واجهات UI/UX", serv2Body:"تصميم واجهة مستخدم مريحة ومنظمة، تسهّل على الزائر إيجاد ما يبحث عنه.",
@@ -288,26 +248,13 @@
       projectF4:"صفحة تواصل مع بيانات الشركة",
       bookCta:"ناقش مشروعك معي",
       viewAllProjects:"شاهد جميع المشاريع",
-      examplesTag:"أفكار وإلهام", examplesTitle:"أمثلة على مواقع أقدر أبنيها",
-      examplesLead:"مواقع حقيقية من الإنترنت، لتوضيح نوعية المشاريع التي أقدر أصممها وأطورها لك.",
-      ex1Title:"بروفايل شركة مقاولات",
-      ex1Body:"موقع تعريفي متكامل لشركة مقاولات: نبذة عن الشركة، المشاريع المنجزة، الوظائف، وبيانات التواصل.",
-      ex2Title:"منصة حجز مواعيد طبية",
-      ex2Body:"موقع لحجز الكشف عند الأطباء أونلاين، بحث حسب التخصص والمدينة، وصفحات تفصيلية لكل عيادة.",
-      ex3Title:"مطعم مع متجر إلكتروني",
-      ex3Body:"موقع مطعم يعرض القصة والقائمة، ويتيح الطلب والحجز أونلاين من نفس الموقع.",
-      ex4Title:"متجر مواد بناء إلكتروني",
-      ex4Body:"متجر أونلاين متخصص ببيع مواد ومستلزمات البناء، مع كتالوج منتجات وطلب توصيل مباشر.",
-      visitSite:"زيارة الموقع",
-      examplesNote:"* هذه المواقع أمثلة من الإنترنت لتوضيح نوعية العمل وليست من تصميمي — أقدر أبني لك موقعاً مشابهاً بالكامل من الصفر.",
       contactTag:"تواصل", contactTitle:"لنبدأ مشروعك القادم", contactLead:"تواصل معي مباشرة عبر أي من الوسائل التالية.",
       contactPhoneK:"الهاتف / واتساب", contactEmailK:"البريد الإلكتروني",
       footerText:"خالد القاضي — مطور ومصمم واجهات مواقع"
     },
     en: {
       brandName:"Khaled Alkadi", navAbout:"About", navSkills:"Skills", navProject:"Projects", navServices:"Services", navContact:"Contact", navCta:"Get in touch",
-      heroEyebrow:"Your guide to a site that fits your business",
-      heroTagline:"Web developer & UI/UX designer — I build professional profile sites for businesses",
+      heroTagline:"Web Developer & UI/UX Designer",
       workTitle:"How I can help your project",
       serv1Title:"Company profile websites", serv1Body:"A professional profile site that introduces your business and services clearly.",
       serv2Title:"UI/UX design", serv2Body:"Clear, organized interface design that helps visitors find what they need.",
@@ -327,18 +274,6 @@
       projectF4:"A contact page with company details",
       bookCta:"Discuss your project",
       viewAllProjects:"View all projects",
-      examplesTag:"Inspiration", examplesTitle:"Examples of sites I can build",
-      examplesLead:"Real websites from around the web, showing the kind of projects I can design and build for you.",
-      ex1Title:"Contracting company profile",
-      ex1Body:"A complete profile site for a contracting company: about the company, completed projects, careers, and contact details.",
-      ex2Title:"Medical appointment booking platform",
-      ex2Body:"A site for booking doctor appointments online, searchable by specialty and city, with detailed clinic pages.",
-      ex3Title:"Restaurant with online store",
-      ex3Body:"A restaurant site that tells its story and menu, while letting customers order and book a table online.",
-      ex4Title:"Building materials online store",
-      ex4Body:"An online store specialized in construction materials and supplies, with a product catalog and direct delivery ordering.",
-      visitSite:"Visit website",
-      examplesNote:"* These sites are examples from the web to illustrate the type of work, not designed by me — I can build you a similar site fully from scratch.",
       contactTag:"Contact", contactTitle:"Let's start your next project", contactLead:"Reach out directly through any of the channels below.",
       contactPhoneK:"Phone / WhatsApp", contactEmailK:"Email",
       footerText:"Khaled Alkadi — Web Developer & UI/UX Designer"
@@ -367,92 +302,110 @@
   });
 
   applyLang(currentLang);
-</script>
 
-<script>
+  // ---- mobile hamburger menu ----
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if(menuToggle && navLinks){
+    menuToggle.addEventListener('click', ()=>{
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ---- animated constellation background ----
   (function(){
-    const canvas = document.getElementById('constellation');
+    const canvas = document.getElementById('starCanvas');
     if(!canvas) return;
     const ctx = canvas.getContext('2d');
-    const heroEl = document.getElementById('hero');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const heroSection = canvas.closest('.hero');
+    let w, h, dpr, points, reduceMotion, rafId;
 
-    const styles = getComputedStyle(document.documentElement);
-    const dotColor = styles.getPropertyValue('--dot').trim() || '#CBD3CE';
-    const lineColor = styles.getPropertyValue('--star-line').trim() || 'rgba(203,211,206,0.3)';
+    reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    let w = 0, h = 0, dpr = 1, particles = [], raf = null, t = 0;
-
-    function resize(){
+    function sizeCanvas(){
       dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = heroEl.clientWidth;
-      h = heroEl.clientHeight;
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
+      w = heroSection.clientWidth;
+      h = heroSection.clientHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      seed();
     }
 
-    function seed(){
-      const density = 12000;
-      const count = Math.max(30, Math.min(85, Math.floor((w * h) / density)));
-      particles = Array.from({ length: count }, () => ({
+    function makePoints(){
+      const area = w * h;
+      const count = Math.max(28, Math.min(90, Math.round(area / 16000)));
+      points = new Array(count).fill(0).map(()=>({
         x: Math.random() * w,
         y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.16,
-        vy: (Math.random() - 0.5) * 0.16,
-        r: Math.random() * 1.3 + 0.7,
-        phase: Math.random() * Math.PI * 2
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        r: Math.random() * 1.4 + 0.6
       }));
     }
 
-    function frame(){
-      t += 0.015;
+    function step(){
       ctx.clearRect(0, 0, w, h);
-      const linkDist = Math.min(150, w * 0.15);
+      const linkDist = Math.min(150, w / 6);
 
-      if(!reduceMotion){
-        for(const p of particles){
-          p.x += p.vx; p.y += p.vy;
-          if(p.x < -20) p.x = w + 20; if(p.x > w + 20) p.x = -20;
-          if(p.y < -20) p.y = h + 20; if(p.y > h + 20) p.y = -20;
-        }
+      for(let i = 0; i < points.length; i++){
+        const p = points[i];
+        p.x += p.vx; p.y += p.vy;
+        if(p.x < 0 || p.x > w) p.vx *= -1;
+        if(p.y < 0 || p.y > h) p.vy *= -1;
+        p.x = Math.max(0, Math.min(w, p.x));
+        p.y = Math.max(0, Math.min(h, p.y));
       }
 
-      for(let i = 0; i < particles.length; i++){
-        for(let j = i + 1; j < particles.length; j++){
-          const a = particles[i], b = particles[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+      for(let i = 0; i < points.length; i++){
+        for(let j = i + 1; j < points.length; j++){
+          const dx = points[i].x - points[j].x;
+          const dy = points[i].y - points[j].y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
           if(dist < linkDist){
-            ctx.globalAlpha = (1 - dist / linkDist) * 0.6;
-            ctx.strokeStyle = lineColor;
+            ctx.strokeStyle = `rgba(203,211,206,${0.35 * (1 - dist / linkDist)})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
             ctx.stroke();
           }
         }
       }
 
-      ctx.globalAlpha = 1;
-      ctx.fillStyle = dotColor;
-      for(const p of particles){
-        const twinkle = reduceMotion ? 1 : (0.7 + Math.sin(t * 1.4 + p.phase) * 0.3);
-        ctx.globalAlpha = twinkle;
+      ctx.fillStyle = '#CBD3CE';
+      for(let i = 0; i < points.length; i++){
+        const p = points[i];
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
       }
-      ctx.globalAlpha = 1;
 
-      if(!reduceMotion){ raf = requestAnimationFrame(frame); }
+      if(!reduceMotion) rafId = requestAnimationFrame(step);
     }
 
-    window.addEventListener('resize', resize);
-    resize();
-    frame();
+    function start(){
+      sizeCanvas();
+      makePoints();
+      if(rafId) cancelAnimationFrame(rafId);
+      step();
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', ()=>{
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(start, 200);
+    });
+
+    start();
   })();
 </script>
 
